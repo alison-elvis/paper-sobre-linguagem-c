@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nome do Autor">
+  <meta name="description" content="Paper sobre vulnerabilidades específicas da linguagem C que não ocorrem em outras linguagens, destacando aspectos como gerenciamento de memória, aritmética de ponteiros e ausência de verificação de limites.">
+  <title>Vulnerabilidades na Linguagem C: Desafios Únicos e Comparações com Outras Linguagens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <article>
+    <header>
+      <h1>Vulnerabilidades na Linguagem C: Desafios Únicos e Comparações com Outras Linguagens</h1>
+      <p>
+        <strong>Autor:</strong> Nome do Autor<br>
+        <strong>Data:</strong> <time datetime="2025-04-02">2 de Abril de 2025</time>
+      </p>
+    </header>
+
+    <main>
+      <section id="resumo">
+        <h2>Resumo</h2>
+        <p>
+          Este paper explora as <em>vulnerabilidades</em> inerentes à linguagem de programação C, destacando aspectos que não são comuns em outras linguagens modernas. Através de uma análise detalhada, discutimos problemas como <strong>estouro de buffer</strong>, aritmética de ponteiros insegura, e gerenciamento manual de memória, ressaltando os riscos e as melhores práticas para mitigá-los.
+        </p>
+      </section>
+
+      <section id="introducao">
+        <h2>Introdução</h2>
+        <p>
+          A linguagem C é conhecida por sua eficiência e controle de baixo nível, porém, essa mesma flexibilidade pode levar a sérios problemas de segurança. Ao contrário de linguagens que implementam verificação automática de limites e gerenciamento de memória, C depende do programador para evitar erros críticos. Este paper analisa as vulnerabilidades mais comuns e explica por que elas são menos prevalentes em linguagens que oferecem proteções embutidas.
+        </p>
+      </section>
+
+      <section id="vulnerabilidades">
+        <h2>Principais Vulnerabilidades em C</h2>
+        <article>
+          <h3>Estouro de Buffer</h3>
+          <p>
+            O <strong>estouro de buffer</strong> ocorre quando um programa escreve dados além dos limites de um array, corrompendo a memória adjacente. Essa vulnerabilidade pode ser explorada para executar código malicioso.
+          </p>
+        </article>
+        <article>
+          <h3>Aritmética de Ponteiros</h3>
+          <p>
+            A manipulação direta de ponteiros permite acesso arbitrário à memória. Sem verificações rigorosas, essa prática pode resultar em <em>comportamentos indefinidos</em> e falhas de segurança.
+          </p>
+        </article>
+        <article>
+          <h3>Gerenciamento Manual de Memória</h3>
+          <p>
+            Em C, a alocação e liberação de memória são feitas manualmente. Erros como <strong>vazamento de memória</strong> ou dupla liberação podem levar a instabilidades e possíveis ataques de negação de serviço.
+          </p>
+        </article>
+      </section>
+
+      <section id="comparacoes">
+        <h2>Comparação com Outras Linguagens</h2>
+        <p>
+          Linguagens como Java, Python e C# oferecem mecanismos de <em>garbage collection</em> e verificações de limites, reduzindo significativamente o risco de vulnerabilidades comuns em C. Esses recursos automatizados não apenas simplificam o desenvolvimento, mas também aumentam a segurança da aplicação.
+        </p>
+      </section>
+
+      <section id="melhores-praticas">
+        <h2>Melhores Práticas para Mitigar Riscos</h2>
+        <p>
+          Para mitigar os riscos inerentes à programação em C, recomenda-se:
+        </p>
+        <ul>
+          <li>Utilizar bibliotecas e funções seguras, como <code>strncpy</code> e <code>snprintf</code>, em vez de funções inseguras.</li>
+          <li>Implementar revisões de código regulares e utilizar ferramentas de análise estática.</li>
+          <li>Adotar práticas de programação defensiva, validando sempre os dados de entrada.</li>
+          <li>Preferir compiladores e ambientes que ofereçam proteções adicionais, como <em>Address Sanitizer</em>.</li>
+        </ul>
+      </section>
+
+      <section id="conclusao">
+        <h2>Conclusão</h2>
+        <p>
+          Embora a linguagem C ofereça um alto nível de controle e desempenho, ela apresenta vulnerabilidades únicas que exigem cautela e conhecimento aprofundado. A adoção de <strong>práticas seguras</strong> e a compreensão dos riscos são essenciais para o desenvolvimento de software robusto e confiável. A comparação com outras linguagens evidencia a importância de proteções automáticas que ajudam a evitar erros comuns e exploráveis.
+        </p>
+      </section>
+
+      <section id="referencias">
+        <h2>Referências</h2>
+        <ul>
+          <li>Keromytis, A. D. "Security Considerations in the C Programming Language." <em>Journal of Computer Security</em>, 2020.</li>
+          <li>Love, R. "Linux Kernel Development." Addison-Wesley, 2010.</li>
+          <li>Seacord, R. C. "Secure Coding in C and C++." Addison-Wesley Professional, 2005.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Nome do Autor - Todos os direitos reservados.</p>
+    </footer>
+  </article>
+</body>
+</html>
